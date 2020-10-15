@@ -6,7 +6,7 @@ lastid = 0
 
 def make_json(csvfile,jsonfile):
   global lastid
-  with open(csvfile, 'r') as csvfile:
+  with open(csvfile, encoding="utf-8") as csvfile:
     spamreader = csv.DictReader(csvfile, delimiter='|')
     ldict = {}
     for row in spamreader:
